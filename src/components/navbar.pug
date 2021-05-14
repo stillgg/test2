@@ -1,0 +1,7 @@
+- var navbar = nav
+
+nav(class='columns breadcrumb has-dot-separator' aria-label='breadcrumbs')
+    ul(class='column is-10 is-offset-1')
+        each val in navbar
+            li
+                a(href=val.href class='is-size-3-tablet is-size-5-desktop')=val.text

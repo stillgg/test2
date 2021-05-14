@@ -1,0 +1,26 @@
+{
+  "name": "test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rakutov Egor",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.2",
+    "file-loader": "^6.2.0",
+    "firebase": "^8.6.1",
+    "firebase-admin": "^9.8.0",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "resolve-url-loader": "^4.0.0",
+    "scss-loader": "0.0.1"
+  }
+}

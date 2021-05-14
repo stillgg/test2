@@ -1,0 +1,32 @@
+-var stock = stock
+
+style
+    include ./stock.scss
+
+.block
+    each val in stock
+        .columns
+            .block(class='box column is-10 is-offset-1 mb-5')
+                a(href = val.href)
+                    .columns
+                        .block(class='column is-four-fifths')
+                            p(class='subtitle is-3 title stock__title')= val.title
+                        .column
+                            p(class='title is-3 has-text-centered')=new Intl.NumberFormat('de-DE', { style: 'currency', currency: val.price_currency, maximumSignificantDigits: 4 }).format(val.price)
+
+                    .block(class='columns is-centered')
+                        div(class='column is-two-fifths is-one-third-desktop')
+                            img(src=require(`../assets/images/${val.image}`).default
+                                alt=val.title
+                                width='350px'
+                                height='262px'
+                            )
+
+                        div(class='column')
+                            p(class='is-size-3-tablet is-size-5-desktop')= `${val.type}. Model:${val.make} ${val.model}, payload: ${val.payload}, gross weight: ${val.gross_weight}`
+
+                    .block(class='tags are-medium')
+                        span(class='tag is-size-3-tablet is-size-5-desktop')= val.year
+                        span(class='tag is-size-3-tablet is-size-5-desktop')= val.mileage + ' ' + val.mileage_measure
+                        span(class='tag is-size-3-tablet is-size-5-desktop')= val.axle_configuration
+                        span(class='tag is-size-3-tablet is-size-5-desktop')= val.power + ' ' + val.power_measure

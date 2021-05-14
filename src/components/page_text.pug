@@ -1,0 +1,6 @@
+-var page_text = page_text
+
+.block
+    each val in page_text
+        .columns
+            #{val.tag}(class='column is-10 is-offset-1 is-size-3-tablet is-size-6-desktop')!=val.content
